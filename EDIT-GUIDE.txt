@@ -1,0 +1,25 @@
+HOW TO EDIT YOUR SITE (no AI or coding needed)
+
+YOUR FILES
+  index.html   All the words on the page, in order from top to bottom.
+  settings.js  Your giving link, email, video, partner count.
+  style.css    Colors and fonts (see the top of the file).
+  photo.jpg    Your photo (add this yourself).
+
+COMMON CHANGES
+  Change any words:     Open index.html and edit the text between > and <.
+                        Look for [brackets]: those are placeholders to replace.
+  Add your video:       In settings.js, paste the YouTube ID into videoId.
+  Update partner count: In settings.js, change partnersNow.
+  Change the look:      At the top of style.css, change a #hex color or a font name.
+  Giving form:          Gift amounts are set inside your Raisely account, not here.
+                        The form shows via giveEmbedUrl in settings.js.
+                        If it ever looks wrong, set giveEmbedUrl to "" and the page
+                        will still show the link to your giving page.
+
+HOW TO PUBLISH A CHANGE (easiest way)
+  1. Go to your repository on github.com and click the file.
+  2. Click the pencil icon, make your edit, click "Commit changes".
+  3. Cloudflare Pages updates your live site automatically within a minute or two.
+
+If you break something, GitHub keeps every old version. Open the file's History and restore the earlier one.

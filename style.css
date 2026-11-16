@@ -1,0 +1,99 @@
+/* ==========================================================
+   BRAND SETTINGS: change these and the whole site updates.
+   Colors are written as #hex codes. Search "hex color picker"
+   on Google to find any color you like.
+   ========================================================== */
+:root{
+  --black:#0a0a0b;   /* main background */
+  --coal:#131316;    /* slightly lighter panels */
+  --bone:#ece6d9;    /* main text */
+  --stone:#a29d92;   /* quieter text */
+  --gold:#b8975a;    /* accent color (buttons, lines) */
+  --line:#2a2a2e;    /* thin divider lines */
+  --display:"Cormorant Garamond",Georgia,serif;      /* headline font */
+  --body:"Jost","Helvetica Neue",Arial,sans-serif;   /* body font */
+}
+
+/* ===== Everything below is layout. Safe to leave alone. ===== */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--bone);font:300 1.0625rem/1.8 var(--body)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.wrap{width:min(1120px,100% - 3rem);margin-inline:auto}
+h1,h2{font-family:var(--display);font-weight:300;line-height:1.02;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(3.2rem,10vw,7.5rem)}
+h2{font-size:clamp(2.2rem,5.5vw,3.8rem)}
+p{margin:0 0 1.2em;max-width:58ch;color:var(--stone)}
+.lead{font:300 clamp(1.3rem,2.6vw,1.7rem)/1.5 var(--display);color:var(--bone)}
+.caps{font:400 .78rem var(--body);letter-spacing:.22em;text-transform:uppercase}
+hr{border:0;border-top:1px solid var(--line);margin:0}
+
+header{position:absolute;inset:0 0 auto;z-index:2}
+header .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:1.6rem}
+header a{text-decoration:none}
+.nav a{margin-left:2rem;color:var(--stone)}
+.nav a:hover{color:var(--gold)}
+
+.btn{display:inline-block;text-decoration:none;cursor:pointer;font:500 .8rem var(--body);letter-spacing:.2em;text-transform:uppercase;padding:1.1rem 2.2rem;border:1px solid var(--gold);color:var(--gold);background:transparent;transition:background .25s,color .25s}
+.btn:hover,.btn.solid{background:var(--gold);color:var(--black)}
+.btn.solid:hover{background:var(--bone);border-color:var(--bone)}
+
+.hero{min-height:92vh;display:flex;align-items:flex-end;padding:9rem 0 5rem;background:radial-gradient(ellipse at 75% 20%,#1b1a17 0%,var(--black) 60%)}
+.hero p{font-size:1.15rem;margin-bottom:2.4rem}
+
+section{padding:6rem 0}
+.frame{position:relative;aspect-ratio:16/9;border:1px solid var(--gold);padding:10px}
+.frame>div,.frame iframe{width:100%;height:100%;border:0;background:var(--coal);display:grid;place-items:center;text-align:center;color:var(--stone);padding:1.5rem}
+.two{display:grid;gap:3rem}
+.photo{aspect-ratio:4/5;background:var(--coal);border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--stone);padding:1rem;font-size:.95rem}
+.photo img{width:100%;height:100%;object-fit:cover}
+
+.verse{text-align:center;background:var(--coal);border-block:1px solid var(--line)}
+.verse blockquote{margin:0 auto 1.5rem;font:italic 300 clamp(2rem,5.5vw,4rem)/1.15 var(--display);max-width:20ch}
+.verse cite{font-style:normal;color:var(--gold)}
+
+.meter{display:flex;align-items:flex-end;gap:3px;height:160px;margin:2.5rem 0 1.5rem}
+.meter span{flex:1;background:var(--line);min-width:0}
+.meter span.on{background:var(--gold)}
+.readout{display:flex;flex-wrap:wrap;gap:1rem 4rem}
+.readout b{display:block;font:300 3rem/1 var(--display);color:var(--bone)}
+
+.list{list-style:none;margin:0 0 2rem;padding:0;max-width:52ch}
+.list li{padding:1rem 0;border-bottom:1px solid var(--line);color:var(--stone)}
+.list li:first-child{border-top:1px solid var(--line)}
+.card{border:1px solid var(--line);background:var(--coal);padding:2.2rem}
+.card fieldset{border:0;padding:0;margin:0 0 1.6rem}
+.card legend{padding:0;margin-bottom:1.1rem;color:var(--gold)}
+.amts{display:grid;grid-template-columns:repeat(2,1fr);gap:.7rem}
+.amts label{cursor:pointer}
+.amts input{position:absolute;opacity:0}
+.amts span{display:block;text-align:center;padding:.95rem;border:1px solid var(--line);font:300 1.5rem var(--display);transition:border-color .2s}
+.amts label:hover span{border-color:var(--stone)}
+.amts input:checked+span{border-color:var(--gold);color:var(--gold)}
+.amts input:focus-visible+span{outline:2px solid var(--gold);outline-offset:3px}
+.total{min-height:3.6em;font-size:.98rem}
+
+footer{padding:3rem 0;color:var(--stone);font-size:.9rem;border-top:1px solid var(--line)}
+footer a{color:var(--bone)}
+
+@media (min-width:860px){
+  .two{grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+  .two.flip{grid-template-columns:1.2fr 1fr}
+}
+@media (max-width:560px){
+  .nav a:not(.keep){display:none}
+  .meter{height:110px;gap:2px}
+  section{padding:4.5rem 0}
+  .card{padding:1.5rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  .meter.go span.on{animation:rise 1.2s cubic-bezier(.2,.7,.2,1) both}
+  @keyframes rise{from{transform:scaleY(.04);transform-origin:bottom}to{transform:scaleY(1);transform-origin:bottom}}
+}
+
+/* giving form (embedded from Raisely) */
+.give-frame{background:#fff;min-height:300px}
+.give-frame iframe{display:block;width:100%;border:0}
+.fine{font-size:.9rem;margin:1.2rem 0 0}
+.fine a{color:var(--gold)}
