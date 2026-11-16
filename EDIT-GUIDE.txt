@@ -1,25 +1,23 @@
-HOW TO EDIT YOUR SITE (no AI or coding needed)
+HOW TO EDIT YOUR SITE (no AI needed)
 
-YOUR FILES
-  index.html   All the words on the page, in order from top to bottom.
-  settings.js  Your giving link, email, video, partner count.
-  style.css    Colors and fonts (see the top of the file).
-  photo.jpg    Your photo (add this yourself).
+FILES
+  index.html   All words and sections, top to bottom.
+  style.css    Colors, fonts, spacing (the top block).
+  settings.js  Your links: booking, contact form, giving, email, video.
+  photo1.jpg, photo2.jpg   Story photos (add yourself).
+  work1.jpg ... work6.jpg  Tentmaking gallery images (add yourself).
 
 COMMON CHANGES
-  Change any words:     Open index.html and edit the text between > and <.
-                        Look for [brackets]: those are placeholders to replace.
-  Add your video:       In settings.js, paste the YouTube ID into videoId.
-  Update partner count: In settings.js, change partnersNow.
-  Change the look:      At the top of style.css, change a #hex color or a font name.
-  Giving form:          Gift amounts are set inside your Raisely account, not here.
-                        The form shows via giveEmbedUrl in settings.js.
-                        If it ever looks wrong, set giveEmbedUrl to "" and the page
-                        will still show the link to your giving page.
+  Words:           index.html, edit text between > and <. [Brackets] are placeholders.
+  Colors / fonts:  top of style.css. Fonts: pick one at fonts.google.com, then change
+                   the font name in style.css AND the fonts <link> line in index.html.
+  Add a gallery project / music card: copy one whole line, paste it under the last, edit it.
+  Remove a project/section: delete the whole line / the whole <section> ... </section>.
+  Reorder sections: cut and paste a whole <section> block above or below another.
+  Gallery columns: in style.css change --cols. Page width: --maxw. Section spacing: --pad.
+  Swap a section's look: on the <section> tag, add or remove class="light" (light background).
 
-HOW TO PUBLISH A CHANGE (easiest way)
-  1. Go to your repository on github.com and click the file.
-  2. Click the pencil icon, make your edit, click "Commit changes".
-  3. Cloudflare Pages updates your live site automatically within a minute or two.
-
-If you break something, GitHub keeps every old version. Open the file's History and restore the earlier one.
+PUBLISHING
+  github.com -> your repo -> click a file -> pencil icon -> edit -> Commit changes.
+  To add photos: Add file -> Upload files -> Commit. Your live site updates in 1-2 minutes.
+  Every older version is kept in the file's History if you need to undo.

@@ -3,113 +3,92 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ben &amp; Claire | An invitation to give</title>
-<meta name="description" content="Ben and Claire serve with EveryHeart in Grand Rapids, Michigan. Join the circle of partners who send us.">
+<title>Ben &amp; Claire | Our Story</title>
+<meta name="description" content="Ben and Claire serve with EveryHeart in Grand Rapids, Michigan. Watch our story and book a call.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- HOW TO EDIT: change words between > and <. Each <section> is one block: you can move, copy or delete whole blocks. -->
 
-<!-- HOW TO EDIT: change the words between the > < marks. Do not delete the < > symbols or anything inside them. -->
+<header class="nav"><div class="wrap caps">
+  <a href="#top">Ben &amp; Claire</a>
+  <nav><a href="#story">Story</a><a href="#craft">Tentmaking</a></nav>
+</div></header>
 
-<header>
+<main>
+<!-- ================= SECTION 1: OPENING ================= -->
+<section id="top" class="hero">
   <div class="wrap">
-    <a class="caps" href="#top">Ben &amp; Claire</a>
-    <nav class="nav caps">
-      <a href="#story">Story</a>
-      <a href="#circle">The Circle</a>
-      <a class="keep" id="topGive" href="#partner">Partner</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-
-<!-- ========== OPENING ========== -->
-<div class="hero">
-  <div class="wrap">
-    <h1>An invitation<br>to give.</h1>
-    <p>We’re Ben and Claire, serving with EveryHeart, a church and mission base in Grand Rapids, Michigan. We’re forming a circle of one hundred partners to send us. We’d be honored to have you in it.</p>
-    <a class="btn solid" href="#partner">Join the circle</a>
-  </div>
-</div>
-
-<!-- ========== VIDEO ========== -->
-<section>
-  <div class="wrap">
-    <div class="frame" id="video">
-      <div>Your ministry video goes here.<br>Add your YouTube video ID in settings.js.</div>
+    <h1>Come ride the road with us.</h1>
+    <p class="lead">We’re Ben and Claire, serving with EveryHeart in Grand Rapids, Michigan. Watch our story, then let’s talk.</p>
+    <div class="video" id="video"><div>Your ministry video plays here.<br>Add its YouTube ID in settings.js.</div></div>
+    <div class="ctas">
+      <a class="btn solid" data-link="book" href="#">Book a call with us</a>
+      <a class="btn" data-link="connect" href="#">Leave your number &amp; email</a>
     </div>
   </div>
 </section>
 
-<!-- ========== OUR STORY ========== -->
-<section id="story">
-  <div class="wrap two">
-    <div class="photo" id="photo">Add a photo of you and Claire.<br>Save it as photo.jpg in this folder.</div>
-    <div>
-      <h2>Our story</h2>
-      <p class="lead">Ben tells stories with sound and picture. Claire walks beside him in every part of it. Together we’ve given our lives to this work.</p>
-      <p>[Write two or three short paragraphs here. How you met. How you ended up in missions. What you saw that made you say yes. What a normal week looks like for you.]</p>
-    </div>
-  </div>
-</section>
-
-<!-- ========== THE VERSE ========== -->
-<section class="verse">
+<!-- ================= SECTION 2: OUR STORY ================= -->
+<section id="story" class="light">
   <div class="wrap">
-    <blockquote>It is more blessed to give than to receive.</blockquote>
-    <cite class="caps">Acts 20:35</cite>
+    <p class="stop caps"><b>II</b> Our story</p>
+    <div class="split">
+      <div class="photos">
+        <!-- Photos: save as photo1.jpg and photo2.jpg in this folder, or change the names here -->
+        <div class="ph big" style="background-image:url(photo1.jpg)"></div>
+        <div class="ph small" style="background-image:url(photo2.jpg)"></div>
+      </div>
+      <div>
+        <h2>How we got on the road</h2>
+        <p class="lead">[One strong opening sentence about who you are and why you do this.]</p>
+        <p>[Your story, in short paragraphs. How you met. How you ended up in missions. What you saw that made you say yes. Where the road goes next.]</p>
+        <blockquote>“[A line from your story worth remembering.]”</blockquote>
+      </div>
+    </div>
+
+    <div class="listen">
+      <h3>Listen &amp; watch</h3>
+      <div class="links">
+        <!-- To add a card, copy one whole <a> line. Replace # with the real link. -->
+        <a class="lc" href="#" target="_blank" rel="noopener"><b>Spotify</b><span>[What people will find here]</span></a>
+        <a class="lc" href="#" target="_blank" rel="noopener"><b>Apple Music</b><span>[What people will find here]</span></a>
+        <a class="lc" href="#" target="_blank" rel="noopener"><b>YouTube</b><span>[What people will find here]</span></a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ========== THE CIRCLE (the 100 lines) ========== -->
-<section id="circle">
+<!-- ================= SECTION 3: TENTMAKING ================= -->
+<section id="craft">
   <div class="wrap">
-    <h2>One hundred partners.</h2>
-    <p>Each line below is one person who has joined us. About $100 a month from each is what sends us out. Every line that lights up is a story we get to tell together.</p>
-    <div class="meter" id="meter" role="img"></div>
-    <div class="readout">
-      <div><b id="now">0</b><span class="caps">Partners joined</span></div>
-      <div><b id="left">100</b><span class="caps">Places remaining</span></div>
+    <p class="stop caps"><b>III</b> Tentmaking</p>
+    <h2>Good work that fuels the mission.</h2>
+    <p>[One or two sentences: what you do, and how the work you take on helps keep you and Claire on the road.]</p>
+    <div class="gallery">
+      <!-- To add a project, copy one whole <a> line. Image: save as work1.jpg etc., or change the name. -->
+      <a class="tile" href="#" style="background-image:url(work1.jpg)"><b>[Project title]</b><small>[Mixing · Artist]</small></a>
+      <a class="tile" href="#" style="background-image:url(work2.jpg)"><b>[Project title]</b><small>[Production · Artist]</small></a>
+      <a class="tile" href="#" style="background-image:url(work3.jpg)"><b>[Project title]</b><small>[Video · Client]</small></a>
+      <a class="tile" href="#" style="background-image:url(work4.jpg)"><b>[Project title]</b><small>[Mixing · Artist]</small></a>
+      <a class="tile" href="#" style="background-image:url(work5.jpg)"><b>[Project title]</b><small>[Production · Artist]</small></a>
+      <a class="tile" href="#" style="background-image:url(work6.jpg)"><b>[Project title]</b><small>[Video · Client]</small></a>
+    </div>
+    <div class="fuel">
+      <p class="lead">Need a record mixed or produced?</p>
+      <a class="btn solid" data-link="book" href="#">Book me for production &amp; mixing</a>
     </div>
   </div>
 </section>
-
-<hr>
-
-<!-- ========== PARTNER ========== -->
-<section id="partner">
-  <div class="wrap two flip">
-    <div>
-      <h2>What partnership means.</h2>
-      <ul class="list">
-        <li>A monthly gift, or a yearly one if that suits you better.</li>
-        <li>Updates from us, with video and photos from the work.</li>
-        <li>Prayer, in both directions.</li>
-        <li>Freedom to change or stop at any time.</li>
-      </ul>
-      <p>[Add one sentence about what your support covers, such as salary, equipment, or ministry costs.]</p>
-    </div>
-    <div class="card">
-      <p class="caps" style="color:var(--gold);margin-bottom:1.2rem">Become a partner</p>
-      <!-- The giving form appears here automatically (set in settings.js) -->
-      <div class="give-frame" id="giveFrame"></div>
-      <p class="fine">Prefer to give on our giving page? <a id="giveBtn" href="#" target="_blank" rel="noopener">Open it here</a>.</p>
-    </div>
-  </div>
-</section>
-
 </main>
 
-<footer>
-  <div class="wrap">
-    Ben &amp; Claire &middot; Serving with EveryHeart &middot; Grand Rapids, Michigan<br>
-    Questions? <a id="mail" href="#">Email us</a>
-  </div>
-</footer>
+<footer><div class="wrap">
+  Ben &amp; Claire · Serving with EveryHeart · Grand Rapids, Michigan<br>
+  <a id="mail" href="#">Email us</a> · <a data-link="give" href="#">Partner with our mission</a>
+</div></footer>
 
 <script src="settings.js"></script>
 <script src="site.js"></script>
