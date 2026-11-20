@@ -1,96 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ben &amp; Claire | Our Story</title>
-<meta name="description" content="Ben and Claire serve with EveryHeart in Grand Rapids, Michigan. Watch our story and book a call.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<!-- HOW TO EDIT: change only the words/links between > and < or inside "quotes". Save (Ctrl+S / Cmd+S), then refresh the browser. -->
+<html lang="en"> <!-- tells browsers the site is in English. Leave as is. -->
+<head> <!-- behind-the-scenes info. Not visible on the page. -->
+<meta charset="utf-8"> <!-- lets the site show special characters. Leave as is. -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- makes the site fit phones. Leave as is. -->
+<title>Ben &amp; Claire Barr · Welcome to the Story</title> <!-- CHANGE: the text shown on the browser tab. (&amp; means the & symbol) -->
+<meta name="description" content="join us in what God is doing in a generation."> <!-- CHANGE: the blurb Google shows under your site name. -->
+<link rel="preconnect" href="https://fonts.googleapis.com"> <!-- speeds up fonts. Leave as is. -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- speeds up fonts. Leave as is. -->
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet"> <!-- loads Google fonts (currently unused, safe to delete this line). -->
+<link rel="stylesheet" href="styles.css"> <!-- connects the design file (styles.css). Leave as is. -->
 </head>
-<body>
-<!-- HOW TO EDIT: change words between > and <. Each <section> is one block: you can move, copy or delete whole blocks. -->
+<body> <!-- everything visitors see starts here. -->
 
-<header class="nav"><div class="wrap caps">
-  <a href="#top">Ben &amp; Claire</a>
-  <nav><a href="#story">Story</a><a href="#craft">Tentmaking</a></nav>
-</div></header>
+<!-- ============ NAV (top bar) ============ -->
+<header class="nav"> <!-- the top bar. -->
+ <a class="wordmark" href="#top">BEN &amp; CLAIRE BARR</a> <!-- CHANGE: your name at top left. Clicking it scrolls to the top. -->
+ <nav> <!-- the menu links. To add one, copy a whole <a> line and change href (where it goes) and the words. -->
+   <a href="#transformation">LIVES TRANSFORMED</a> <!-- jumps to the section with id="transformation" below. -->
+   <a href="#join">JOIN THE STORY</a> <!-- jumps to the Join the Story section. -->
+   <a href="#connect">STAY CONNECTED</a> <!-- jumps to the Let's connect section. -->
+   <a class="give" href="https://ben-and-claire-barr.raiselysite.com/" target="_blank" rel="noopener">Ready to give?</a> <!-- GIVE #1: change the link between the quotes after href= -->
+ </nav>
+</header>
 
-<main>
-<!-- ================= SECTION 1: OPENING ================= -->
-<section id="top" class="hero">
-  <div class="wrap">
-    <h1>Come ride the road with us.</h1>
-    <p class="lead">We’re Ben and Claire, serving with EveryHeart in Grand Rapids, Michigan. Watch our story, then let’s talk.</p>
-    <div class="video" id="video"><div>Your ministry video plays here.<br>Add its YouTube ID in settings.js.</div></div>
-    <div class="ctas">
-      <a class="btn solid" data-link="book" href="#">Book a call with us</a>
-      <a class="btn" data-link="connect" href="#">Leave your number &amp; email</a>
-    </div>
-  </div>
+<main id="top"> <!-- the main page content. -->
+
+<!-- ============ 1. HERO: headline, paragraph, then video ============ -->
+<section class="hero"> <!-- the opening section. -->
+ <h1>A story<br>worth <i>sharing.</i></h1> <!-- CHANGE: the big headline. <br> = new line, <i>...</i> = italic. -->
+
+ <!-- Paragraph is now ABOVE the video. CHANGE the words between <p ...> and </p>. <strong> makes words bold. -->
+ <div class="hero-extra"> <!-- the box that spaces the paragraph. -->
+   <p class="lede">the Gospel changed <strong>everything</strong> for us. It's our privilege to <strong>make Jesus known</strong> to a generation longing for His presence.</p>
+ </div>
+
+ <!-- ===== VIDEO ===== -->
+ <div class="video-wrap" id="videoWrap"> <!-- the black video frame. Everything inside sits on top of the video. -->
+
+   <!-- The video itself. CHANGE: the number after /video/ and the h= code come from your Vimeo link.
+        controls=0 hides Vimeo's buttons. title/byline/portrait/badge=0 hide Vimeo's name tags. dnt=1 turns off tracking. Don't change the rest. -->
+   <iframe
+     id="story"
+     title="How we got here"
+     src="https://player.vimeo.com/video/66507747?h=ec477b03de&autoplay=0&muted=0&loop=0&playsinline=1&controls=0&title=0&byline=0&portrait=0&badge=0&dnt=1&keyboard=0&pip=0"
+     referrerpolicy="strict-origin-when-cross-origin"
+     allow="autoplay; fullscreen; encrypted-media"
+     tabindex="-1"
+   ></iframe> <!-- tabindex=-1 and the CSS stop clicks from reaching Vimeo, so only YOUR buttons control the video. -->
+
+   <!-- COVER: thumbnail + button. Fades away when the button is clicked.
+        CHANGE the thumbnail picture: put your image at assets/story-thumbnail.jpg (or change the name inside url('...')). -->
+   <div class="cover" id="cover" style="--thumb:url('assets/story-thumbnail.jpg')">
+     <button class="story-button" id="storyBtn" type="button"> <!-- the main play button. -->
+       <span class="play-icon" aria-hidden="true"></span> <!-- the little triangle (drawn by styles.css). -->
+       <b>HOW WE GOT HERE</b> <!-- CHANGE: the words on the button. -->
+     </button>
+   </div>
+
+   <!-- PAUSE / PLAY button, bottom left. Appears after the cover fades. The word inside changes automatically. -->
+   <button class="ctrl" id="ctrlBtn" type="button" aria-label="Pause video">Pause</button>
+ </div>
+
+ <!-- EDIT: free space below the video for anything you want to add later (a caption, a date, a second line). -->
+
+ <!-- ===== OLD CODE (kept for reference, NOT running). Delete when you're sure you don't need it. =====
+ <iframe id="story" title="Our Story"
+   src="https://player.vimeo.com/video/66507747?h=ec477b03de&autoplay=0&muted=0&loop=0&playsinline=1&controls=1&title=0&byline=0&portrait=0&badge=0"
+   frameborder="0" allowfullscreen></iframe>
+ <button class="story-button" id="storyBtn" type="button">How did we get here? <span class="story-arrow">↗</span></button>
+ ===== END OLD CODE ===== -->
 </section>
 
-<!-- ================= SECTION 2: OUR STORY ================= -->
-<section id="story" class="light">
-  <div class="wrap">
-    <p class="stop caps"><b>II</b> Our story</p>
-    <div class="split">
-      <div class="photos">
-        <!-- Photos: save as photo1.jpg and photo2.jpg in this folder, or change the names here -->
-        <div class="ph big" style="background-image:url(photo1.jpg)"></div>
-        <div class="ph small" style="background-image:url(photo2.jpg)"></div>
-      </div>
-      <div>
-        <h2>How we got on the road</h2>
-        <p class="lead">[One strong opening sentence about who you are and why you do this.]</p>
-        <p>[Your story, in short paragraphs. How you met. How you ended up in missions. What you saw that made you say yes. Where the road goes next.]</p>
-        <blockquote>“[A line from your story worth remembering.]”</blockquote>
-      </div>
-    </div>
+<!-- ============ 2. REAL TRANSFORMATION ============
+     Each <article class="story"> is one testimony. To add one, copy a whole <article>...</article> block and paste it right below. -->
+<section class="transform" id="transformation"> <!-- id lets the menu jump here. -->
+ <h2>Real encounter.</h2> <!-- CHANGE: section title. -->
+ <p class="section-intro">We couldn't stay the same after meeting Jesus. (It's probably wouldn't be possible even if we tried).</p> <!-- CHANGE: short line under the title. -->
 
-    <div class="listen">
-      <h3>Listen &amp; watch</h3>
-      <div class="links">
-        <!-- To add a card, copy one whole <a> line. Replace # with the real link. -->
-        <a class="lc" href="#" target="_blank" rel="noopener"><b>Spotify</b><span>[What people will find here]</span></a>
-        <a class="lc" href="#" target="_blank" rel="noopener"><b>Apple Music</b><span>[What people will find here]</span></a>
-        <a class="lc" href="#" target="_blank" rel="noopener"><b>YouTube</b><span>[What people will find here]</span></a>
-      </div>
-    </div>
-  </div>
+ <div class="stories"> <!-- holds all the testimony photos. -->
+   <article class="story"> <!-- ONE testimony starts. -->
+     <button class="story-toggle" aria-expanded="false" style="--photo:url('assets/story-1.jpg')"> <!-- CHANGE: photo file name in assets/. -->
+       <span class="name">2020</span> <!-- CHANGE: the person's name. -->
+       <span class="hint">Read</span> <!-- the label on the photo. Becomes "Close" automatically. -->
+     </button>
+     <div class="story-body"><div>
+       <p>God changed everything for us. Though we grew up knowing the truth of the gospel, when we personally met the love of Jesus through moments in His presence, we saw that He was worth giving everything for. During this season, we also began building relationship with EveryHeart by attending local gatherings and eagerly gleaning from the experience of their leadership.</p> <!-- CHANGE: their testimony. -->
+     </div></div>
+   </article> <!-- ONE testimony ends. -->
+
+   <article class="story">
+     <button class="story-toggle" aria-expanded="false" style="--photo:url('assets/story-2.jpg')">
+       <span class="name">2021</span>
+       <span class="hint">Read</span>
+     </button>
+     <div class="story-body"><div>
+       <p>In 2021, God called us into ministry. We had no experience, just a burning conviction that the same love we had encountered was for a generation. Through worship nights, evangelism outreaches, and media initiatives, we began mobilizing our generation to respond to this love that changed our lives.</p>
+     </div></div>
+   </article>
+
+   <article class="story">
+     <button class="story-toggle" aria-expanded="false" style="--photo:url('assets/story-3.jpg')">
+       <span class="name">2024</span>
+       <span class="hint">Read</span>
+     </button>
+     <div class="story-body"><div>
+       <p>In November of 2023, God spoke to Ben about joining EveryHeart as missionaries. After confirmation through Claire in January 2024, we dropped everything to pursue this calling full-time. After attending a 3 month ministry school, we packed our life belongings in a storage unit and headed on the road for 10 weeks to preach the gospel across America.</p>
+     </div></div>
+   </article>
+
+   <article class="story">
+     <button class="story-toggle" aria-expanded="false" style="--photo:url('assets/story-3.jpg')">
+       <span class="name">beyond...</span>
+       <span class="hint">Read</span>
+     </button>
+     <div class="story-body"><div>
+       <p>We are continuing to run with EveryHeart for the foreseeable future. Whether we are building the infrastructure of the ministry through media, administration, or preaching the gospel on the streets, we are honored to see the gospel go forth in a generation in our day-to-day lives.</p>
+     </div></div>
+   </article>
+ </div>
 </section>
 
-<!-- ================= SECTION 3: TENTMAKING ================= -->
-<section id="craft">
-  <div class="wrap">
-    <p class="stop caps"><b>III</b> Tentmaking</p>
-    <h2>Good work that fuels the mission.</h2>
-    <p>[One or two sentences: what you do, and how the work you take on helps keep you and Claire on the road.]</p>
-    <div class="gallery">
-      <!-- To add a project, copy one whole <a> line. Image: save as work1.jpg etc., or change the name. -->
-      <a class="tile" href="#" style="background-image:url(work1.jpg)"><b>[Project title]</b><small>[Mixing · Artist]</small></a>
-      <a class="tile" href="#" style="background-image:url(work2.jpg)"><b>[Project title]</b><small>[Production · Artist]</small></a>
-      <a class="tile" href="#" style="background-image:url(work3.jpg)"><b>[Project title]</b><small>[Video · Client]</small></a>
-      <a class="tile" href="#" style="background-image:url(work4.jpg)"><b>[Project title]</b><small>[Mixing · Artist]</small></a>
-      <a class="tile" href="#" style="background-image:url(work5.jpg)"><b>[Project title]</b><small>[Production · Artist]</small></a>
-      <a class="tile" href="#" style="background-image:url(work6.jpg)"><b>[Project title]</b><small>[Video · Client]</small></a>
-    </div>
-    <div class="fuel">
-      <p class="lead">Need a record mixed or produced?</p>
-      <a class="btn solid" data-link="book" href="#">Book me for production &amp; mixing</a>
-    </div>
-  </div>
+<!-- ============ 3. JOIN THE STORY ============
+     Each <li> is one big row. CHANGE the link (href=), the big word (verb), and the small description (desc). -->
+<section class="join" id="join">
+ <h2>We've been busy...</h2> <!-- CHANGE: section title. -->
+ <p class="section-intro">These are some of the ways we've been serving our generation in the context of EveryHeart :))</p> <!-- CHANGE: intro line. -->
+
+ <ul class="paths"> <!-- the list of rows. -->
+   <li><a href="https://www.youtube.com/@everyhearrt/streams" target="_blank" rel="noopener">
+     <span class="verb">tours</span><span class="desc">cities, campuses, countries</span></a></li> <!-- row 1 -->
+   <li><a id="prayLink" href="#connect" target="_blank" rel="noopener"> <!-- its link is set in script.js (SHEET_LINK). -->
+     <span class="verb">media</span><span class="desc">a documentary, livestreamed events, and worship initiatives</span></a></li> <!-- row 2 -->
+   <li><a href="https://www.everyheartmovement.com/tours" target="_blank" rel="noopener">
+     <span class="verb">day-to-day</span><span class="desc">administrative facilitation, audio and media production</span></a></li> <!-- row 3 -->
+ </ul>
 </section>
+
+<!-- ============ 4. LET'S CONNECT ============ -->
+<section class="connect" id="connect">
+ <div class="connect-head">
+   <h2>Join us on mission.</h2> <!-- CHANGE: title. -->
+   <p>We're building a team of partners who will run alongside us, burning to see the gospel go forth in a generation ❤️‍🔥</p> <!-- CHANGE: text. -->
+   <a class="btn" href="https://cal.com/ben-barr-zrgkkj/30min" target="_blank" rel="noopener">Schedule a call</a> <!-- CHANGE: button words, or the cal.com link. -->
+ </div>
+
+ <!-- The sign-up form. Set SHEET_ENDPOINT in script.js to send entries to your Google Sheet. -->
+ <form id="connectForm" class="form" novalidate>
+  <label>Name <input type="text" name="name" autocomplete="name" required></label> <!-- name box. -->
+   <label>Email <input type="email" name="email" autocomplete="email" required></label> <!-- email box. -->
+   <label>Phone <input type="tel" name="phone" autocomplete="tel"></label> <!-- phone box. -->
+   <button class="btn" type="submit">Send</button> <!-- CHANGE: button word. -->
+   <p class="form-note" id="formNote" role="status"></p> <!-- messages like "Thank you" appear here. -->
+ </form>
+</section>
+
+<!-- ADD NEW SECTIONS HERE: copy any <section>...</section> above, paste it on this line, edit the words. -->
+
 </main>
 
-<footer><div class="wrap">
-  Ben &amp; Claire · Serving with EveryHeart · Grand Rapids, Michigan<br>
-  <a id="mail" href="#">Email us</a> · <a data-link="give" href="#">Partner with our mission</a>
-</div></footer>
+<footer> <!-- the bottom strip. -->
+ <span>© <span id="year"></span> Ben &amp; Claire Barr</span> <!-- the year fills in by itself. CHANGE the names if you like. -->
+ <a href="https://ben-and-claire-barr.raiselysite.com/" target="_blank" rel="noopener">Ready to give?</a> <!-- GIVE #2: change the link here too. -->
+</footer>
 
-<script src="settings.js"></script>
-<script src="site.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script> <!-- lets our custom buttons control the video. Leave as is. -->
+<script src="script.js"></script> <!-- connects the behavior file (script.js). Leave as is. -->
+</body>
+</html>
 </body>
 </html>
